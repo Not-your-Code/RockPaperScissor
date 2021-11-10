@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&family=Kumbh+Sans:wght@700&display=swap');
 
+
+:root{
+    --font-fam: 'Barlow Semi Condensed', sans-serif;
+}
 *,*::after,*::before{
     margin: 0;
     padding: 0;
@@ -24,13 +28,17 @@ body{
     margin-top: 20px;
     display: flex;
     border: 2px solid hsl(217, 16%, 45%);
-    
+    position: relative;
     width:536px;
 
 }
 .scoreboard img{
+   
     filter: drop-shadow( 4px 1px 16px rgba(0, 0, 0, 0.4)  );
 }
+
+    
+
 .scoreboard:hover{
     border: 2px solid white;
     transition: .5s ease;
@@ -62,4 +70,96 @@ body{
     position: absolute;
     top: 13px;
     right: 40px;
+}
+
+.scactive{
+    visibility: visible;
+    animation: scActive 2s ease;
+}
+@keyframes scActive {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+.footer{
+  
+   position: absolute;
+   bottom :15px;
+   right: 20px;
+ 
+   width: 400px;
+   height: 60px;
+}
+#rules{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-family: var(--font-fam);
+    text-transform: uppercase;
+    background-color: transparent;
+    color:white;
+    letter-spacing: 0.3rem;
+    width:120px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid white;
+    cursor: pointer;
+    
+    
+}
+#rules:hover{
+    background: white;
+    color: hsl(237, 49%, 15%);
+    transition: 1s ease;
+}
+.Rulebox{
+    visibility: hidden;
+    box-shadow: -5px -1px 108px -8px rgba(0,0,0,0.61);
+-webkit-box-shadow: -5px -1px 108px -8px rgba(0,0,0,0.61);
+-moz-box-shadow: -5px -1px 108px -8px rgba(0,0,0,0.61);
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    top: 21%;
+    right: 35%;
+
+}
+#heading{
+    font-family: var(--font-fam);
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;   
+}
+#ruleImg img{
+    height: 257px;
+    width: 280px;
+    margin: 10px;
+}
+
+#wrp{
+    width: 100%;
+   visibility: hidden;
+   overflow: hidden;
+    height: 100vh;
+    opacity: .4;
+    z-index: 1;
+    background-color: black;
+}
+#Cross{
+    cursor: pointer;
 }
