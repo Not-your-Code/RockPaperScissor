@@ -7,7 +7,8 @@
 }
 
 body{
-    background-color: hsl(214, 47%, 23%) ;
+    background-color :hsl(237, 49%, 15%);
+    animation: coLor 3s infinite;
 }
 .header{
     
@@ -23,34 +24,41 @@ body{
     margin-top: 20px;
     display: flex;
     border: 2px solid hsl(217, 16%, 45%);
+    
     width:536px;
 
+}
+.scoreboard img{
+    filter: drop-shadow( 4px 1px 16px rgba(0, 0, 0, 0.4)  );
 }
 .scoreboard:hover{
     border: 2px solid white;
     transition: .5s ease;
 }
 .score{
+    visibility: hidden;
     background-color: white;
-    height: 86px;
-    width: 109px;
+    height: 117px;
+    width: 127px;
     border-radius: 15px;
     text-align: center;
     padding-top: 30px;
     position: relative;
+    
 }
 #Score{
+   
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 14px;
-    letter-spacing: 5px;
+    font-size: 18px;
+    letter-spacing: 4px;
     text-transform:uppercase;
     position: absolute;
-    top: 4px;
-    right: 23px;   
+    top: 6px;
+    right: 27px;   
 }
 #Count{
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 57px;
+    font-size: 87px;
     position: absolute;
     top: 13px;
     right: 40px;
